@@ -1,0 +1,21 @@
+@mixin tri ($width, $color, $side) {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+
+    @if $side == "top" {
+         border-top: $width solid $color;
+        border-right: $width solid transparent;
+        border-bottom: $width solid transparent;
+        border-left: $width solid transparent;
+    }
+
+    @if $side == "bottom" {
+        border-bottom: $width solid $color;
+       border-right: $width solid transparent;
+       border-top: $width solid transparent;
+       border-left: $width solid transparent;
+   }
+} 

@@ -1,0 +1,39 @@
+.container {
+    width: 1300px;
+    border: 2px solid #333333;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg {
+    position: relative; 
+    max-width: 20em;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 20px;
+
+
+    &--person2 {
+        background-color: lightcoral;
+    }
+
+    &--person2::before {
+        top: 0;
+        right: 100%;
+        transform: translateX(50%);
+        @include tri (25px, lightcoral, "top")
+    }
+
+    &--person1 {
+        background-color: lightblue;
+        align-self: flex-end;
+    }
+
+
+    &--person1::after {
+        bottom: 0;
+        left: 100%;
+        transform: translateX(-50%);
+        @include tri (25px,lightblue, "bottom")
+    }
+}
